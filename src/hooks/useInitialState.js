@@ -16,10 +16,18 @@ const useInitialState = () => {
         });
     };
 
+    //Crear funcion para remover productos de nuestro carrito
+    const removeFromCart = (payload) => {
+        setState({
+            ...state,
+            cart: state.cart.filter(item => item.id != payload.id) 
+        })
+    }
 
     return {
         state,
-        addToCart
+        addToCart,
+        removeFromCart
     }
 }
 

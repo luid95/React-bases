@@ -15,8 +15,6 @@ const MyOrder = () => {
 
 		const sum = state.cart.reduce(reducer, 0);
 
-		console.log('sum...');
-		console.log(sum);
 		return sum;
 	}
 
